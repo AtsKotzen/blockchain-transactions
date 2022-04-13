@@ -5,7 +5,7 @@ const web3 = new Web3(new Web3.providers.HttpProvider(polygonNetwork))
 const getBlockNumber = function () {
   web3.eth.getBlockNumber(function (error, result) {
     try {
-      console.log('Block Number: ' + result)
+      console.log('Polygon Block Number: ' + result)
     } catch (error) {
       console.log(error)
     }
@@ -19,7 +19,7 @@ const getBalanceFromAddress = function (address) {
     } else {
       let ethAmount = (web3.utils.fromWei(result, "ether"))
       console.log("Address: " + address)
-      console.log(ethAmount + " MATIC")
+      console.log("Ballance: " + ethAmount + " MATIC")
     }
   })
 }
